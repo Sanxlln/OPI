@@ -10,6 +10,10 @@ set(SOURCES_TEST
     "insert_front_test.cpp"
     "iterator_tests.cpp"
     "size_test.cpp"
+    "test_erase_front.cpp"
+    "test_erase_back.cpp"
+    "test_insert_back.cpp"
+    "test_insert_front.cpp"
 )
 
 foreach(test_src ${SOURCES_TEST})
