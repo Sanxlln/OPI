@@ -6,24 +6,25 @@ on:
   pull_request:
     branches: [ "master" ]
 
+env:
+  BUILD_TYPE: Release
+  MY_VARIABLE: "Hello"
+  
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-
-    env:
-      BUILD_DIR: build
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Configure CMake
-        run: cmake -B ${{ env.BUILD_DIR }} -S . -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+        run: cmake -B ${{ github.workspace }}/build -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
 
       - name: Build
-        run: cmake --build ${{ env.BUILD_DIR }} --config ${{ matrix.build_type }}
+        run: cmake --build ${{ github.workspace }}/build --config ${{ env.BUILD_TYPE }}
 
       - name: Test
-        working-directory: ${{ env.BUILD_DIR }}
-        run: ctest --build-config ${{ matrix.build_type }}
+        run: ${{ github.workspace }}/build/MyAwesomeProgram
+
 
 
