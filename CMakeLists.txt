@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 project(MyAwesomeProgram)
+enable_testing()
 
 set(LIB_HEADERS "list.hpp")
 set(LIB_SOURCES "list.cpp")
