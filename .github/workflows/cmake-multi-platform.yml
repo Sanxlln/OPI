@@ -1,4 +1,4 @@
-name: Build and run tests without ctest
+name: Build and run tests
 
 on:
   push:
@@ -29,8 +29,9 @@ jobs:
       - name: Run main program
         run: ${{ github.workspace }}/build/MyAwesomeProgram
 
-      - name: Run tests
-        run: ${{ github.workspace }}\build\Test\Debug\tests.exe
+      - name: Run tests executable
+        run: /home/runner/work/OPI/OPI/build/Test/Debug/tests.exe
+
 
 
 
