@@ -30,7 +30,7 @@ jobs:
         run: ${{ github.workspace }}/build/MyAwesomeProgram
 
       - name: Run tests
-        run: ${{ github.workspace }}/build/Test\Debug\tests.exe
+        run: ${{ github.workspace }}\build\Test\Debug\tests.exe
 
 
 
