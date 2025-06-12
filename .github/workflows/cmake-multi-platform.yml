@@ -28,9 +28,9 @@ jobs:
 
       - name: Run main program
         run: ${{ github.workspace }}/build/MyAwesomeProgram
-
       - name: Run tests executable
-        run: /home/runner/work/OPI/OPI/build/Test/Debug/tests
+        run: ${{ github.workspace }}/build/Test/tests
+
 
 
 
