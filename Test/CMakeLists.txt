@@ -2,7 +2,23 @@ project(MyAwesomeProgram_Tests)
 
 enable_testing()
 
+<<<<<<< HEAD
 set(SOURCES_TEST "tests.cpp")
+=======
+set(SOURCES_TEST
+    "empty_test.cpp"
+    "erase_back_test.cpp"
+    "erase_front_test.cpp"
+    "insert_back_test.cpp"
+    "insert_front_test.cpp"
+    "iterator_tests.cpp"
+    "size_test.cpp"
+    "test_erase_front.cpp"
+    "test_erase_back.cpp"
+    "test_insert_back.cpp"
+    "test_insert_front.cpp"
+)
+>>>>>>> 983c0edb83fe597c87a2a0f6cae98b4599721722
 
 foreach(test_src ${SOURCES_TEST})
     get_filename_component(test_name ${test_src} NAME_WE)
